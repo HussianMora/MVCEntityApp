@@ -1,22 +1,17 @@
 ﻿@model MVCEntityApp.Models.employee
-
 @{
     ViewBag.Title = "Edit";
 }
-
-<h2>Edit</h2>
-
-
+<h2>Edit Employee Details</h2>
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+  
     <div class="form-horizontal">
         <h4>employee</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.employee_id)
-
         <div class="form-group">
             @Html.LabelFor(model => model.employee_name, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -24,7 +19,6 @@
                 @Html.ValidationMessageFor(model => model.employee_name, "", new { @class = "text-danger" })
             </div>
         </div>
-
         <div class="form-group">
             @Html.LabelFor(model => model.department, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -32,7 +26,6 @@
                 @Html.ValidationMessageFor(model => model.department, "", new { @class = "text-danger" })
             </div>
         </div>
-
         <div class="form-group">
             @Html.LabelFor(model => model.joining_date, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -40,7 +33,6 @@
                 @Html.ValidationMessageFor(model => model.joining_date, "", new { @class = "text-danger" })
             </div>
         </div>
-
         <div class="form-group">
             @Html.LabelFor(model => model.mobile_no, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -48,7 +40,6 @@
                 @Html.ValidationMessageFor(model => model.mobile_no, "", new { @class = "text-danger" })
             </div>
         </div>
-
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Save" class="btn btn-default" />
@@ -56,11 +47,9 @@
         </div>
     </div>
 }
-
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
-
 <script src="~/Scripts/jquery-1.10.2.min.js"></script>
 <script src="~/Scripts/jquery.validate.min.js"></script>
 <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
